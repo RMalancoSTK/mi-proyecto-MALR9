@@ -1,0 +1,45 @@
+<!-- <div class="login-d">
+    <mat-form-field appearance="fill">
+        <mat-label>Usuario</mat-label>
+        <input matInput [(ngModel)]="user.usuario" name="usuario">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput [(ngModel)]="user.password" name="pass" type="password">
+    </mat-form-field>
+    <button mat-raised-button color="accent" (click)="login()">Entrar</button>
+</div>
+ -->
+
+
+
+
+<div class="bg-light min-vh-100 d-flex flex-row align-items-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4 p-5">
+          <div class="card">
+            <div class="card-body">
+              <img src="https://softtek.eu/wp-content/uploads/2021/09/Softtek-original-1.svg" alt="" width="30"
+                height="24" class="d-inline-block align-text-top">
+              <h1 class="h2 mb-4">
+                <p class="d-inline-block align-text-top">Login</p>
+              </h1>
+              <form>
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" class="form-control"  [(ngModel)]="user.username" name="username">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control"  [(ngModel)]="user.password" name="pass">
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

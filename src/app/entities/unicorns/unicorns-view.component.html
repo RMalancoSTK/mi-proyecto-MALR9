@@ -1,0 +1,62 @@
+<!-- <div fxLayout="row" fxLayoutAlign="start center" mat-dialog-title>
+    <h2 class="title m-0" fxFlex="auto">{{unicorn?.name}}</h2>
+    <button class="text-secondary" mat-dialog-close mat-icon-button type="button">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+<mat-divider class="mx-6 text-border"></mat-divider>  
+<mat-dialog-content class="mx-6" fxLayout="column">
+    <mat-card class="example-card">
+        <mat-card-title>{{unicorn?.name}}</mat-card-title>
+        <mat-card-subtitle>{{unicorn?.age}}</mat-card-subtitle>
+        <mat-card-content>
+            <p>{{unicorn?.colour}}</p>
+        </mat-card-content>
+    </mat-card>
+</mat-dialog-content>
+<mat-divider class="mx-6 text-border"></mat-divider>
+<mat-dialog-actions align="end">
+    <button cdkFocusInitial color="warn" mat-button mat-dialog-close type="button">CERRAR</button>
+</mat-dialog-actions> -->
+
+
+<div fxLayout="row" fxLayoutAlign="start center" mat-dialog-title class="px-6 py-4 bg-primary">
+    <h1 class="title m-0 text-white">{{ unicorn.name }}</h1>
+    <!-- boton hasta la orilla derecha -->
+    <span fxFlex></span>
+    <button mat-dialog-close mat-icon-button type="button" class="text-white"
+      aria-label="Example icon-button with a heart icon">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <mat-divider class="mx-6 text-border"></mat-divider>
+  <mat-dialog-content class="px-6 py-4" fxLayout="row" fxLayoutAlign="start center">
+    <!-- ocupando mat-car para mostrar los datos del unicornio bien centrado y con los margenes correctos -->
+    <mat-card class="w-100">
+      <mat-card-content>
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <div fxFlex="50">
+            <h4 class="title m-0">Edad</h4>
+          </div>
+          <div fxFlex="50">
+            <h4 class="title m-0">{{ unicorn.age }}</h4>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <div fxFlex="50">
+            <h4 class="title m-0">Color</h4>
+          </div>
+          <div fxFlex="50">
+            <h4 class="title m-0">{{ unicorn.colour }}</h4>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-divider class="mx-6 text-border"></mat-divider>
+  <mat-dialog-actions aling="end">
+    <button cdkFocusInitial color="warn" mat-button mat-dialog-close type="button">
+      Close
+    </button>
+  </mat-dialog-actions>
+  

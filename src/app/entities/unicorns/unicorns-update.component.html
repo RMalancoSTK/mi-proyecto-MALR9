@@ -1,0 +1,48 @@
+<div fxLayout="row" fxLayoutAlign="start center" mat-dialog-title class="px-6 py-4 bg-primary">
+    <h1 class="title m-0 text-white">{{ unicorn.name || 'Crear unicornio' }}</h1>
+    <span fxFlex></span>
+    <button mat-dialog-close mat-icon-button type="button" class="text-white"
+      aria-label="Example icon-button with a heart icon">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <mat-divider class="mx-6 text-border"></mat-divider>
+  <mat-dialog-content class="px-6 py-4" fxLayout="row" fxLayoutAlign="start center">
+    <mat-card class="w-100">
+      <mat-card-content>
+        <form class="example-container" #ngForm="ngForm">
+          <!-- <app-input-data-component [ph]="'Nombre'" [typeInput]="'text'" [val]="unicorn.name"
+            (inputData)="getData($event)" [name]="'name'"></app-input-data-component>
+          <app-input-data-component [ph]="'Edad'" [typeInput]="'number'" [val]="unicorn.age" (inputData)="getEdad($event)"
+            [name]="'age'"></app-input-data-component>
+          <app-input-data-component [ph]="'Color'" [typeInput]="'text'" [val]="unicorn.colour"
+            (inputData)="getColor($event)" [name]="'color'"></app-input-data-component>
+          <button mat-button type="button" class="text-primary" (click)="save()">Guardar</button> -->
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Nombre" [(ngModel)]="unicorn.name" name="name" #name="ngModel" required>
+            <mat-error *ngIf="name.invalid && (name.dirty || name.touched)">
+              El nombre es requerido
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Edad" [(ngModel)]="unicorn.age" name="age" #age="ngModel" required type="number">
+            <mat-error *ngIf="age.invalid && (age.dirty || age.touched)">
+              La edad es requerida
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="w-100">
+            <input matInput placeholder="Color" [(ngModel)]="unicorn.colour" name="color" #color="ngModel" required>
+            <mat-error *ngIf="color.invalid && (color.dirty || color.touched)">
+              El color es requerido
+            </mat-error>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </mat-dialog-content>
+  <mat-divider class="mx-6 text-border"></mat-divider>
+  <mat-dialog-actions aling="end">
+    <button mat-button type="button" class="text-primary" (click)="save()" [disabled]="ngForm.invalid">Guardar</button>
+    <button mat-button mat-dialog-close type="button" class="text-primary" cdkFocusInitial color="warn">Cancelar</button>
+  </mat-dialog-actions>
+  
